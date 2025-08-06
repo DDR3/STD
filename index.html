@@ -24,7 +24,7 @@
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
-    <script src="StudentDashboardBS.js"></script>
+    <script defer src="HeaderSidebarBS.js"></script>
   </head>
   <body class="main-bg">
     <!-- Header -->
@@ -33,12 +33,12 @@
     >
       <div class="d-flex align-items-center">
         <img
-          src="stud-img/header-logo.png"
+          src="stud-img/header-logo-nobg.png"
           alt="SparkLab Logo"
           class="header-logo d-none d-lg-block"
         />
         <img
-          src="stud-img/logopart1.png"
+          src="stud-img/logopart1-nobg.png"
           alt="SparkLab Logo"
           class="header-logo d-block d-lg-none"
         />
@@ -68,6 +68,9 @@
 
     <!-- Sidebar Toggle Icon for Mobile and Tablet -->
     <i class="bi bi-list sidebar-toggle d-lg-none" id="sidebarToggle"></i>
+
+    <!-- Sidebar Overlay for Mobile -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
     <!-- Sidebar -->
     <nav class="sidebar" id="sidebar">

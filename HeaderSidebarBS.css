@@ -125,19 +125,18 @@
 /* Mobile responsive styles for screens < 576px */
 @media (max-width: 575.98px) {
   .custom-header {
-    justify-content: center !important;
+    justify-content: space-between !important;
     height: 45px;
   }
 
   .custom-header > div:first-child {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    position: static;
+    transform: none;
+    margin-left: 30px; /* Space for the toggle button */
   }
 
   .custom-header > div:last-child {
-    position: absolute;
-    right: 15px;
+    position: static;
   }
 
   .header-logo {
@@ -158,6 +157,7 @@
     transform: translateX(-100%);
     width: 110px;
     padding-top: 45px; /* Account for smaller mobile header */
+    transition: transform 0.3s ease;
   }
 
   .sidebar.show {
@@ -183,5 +183,79 @@
     top: 2.5px;
     left: 10px;
     font-size: 1.7rem;
+  }
+
+  .header-icon:hover,
+  .sidebar-toggle:hover {
+    color: black !important;
+  }
+}
+
+/* Mobile landscape responsive styles for screens < 576px */
+@media (max-width: 575.98px) and (orientation: landscape) {
+  .custom-header {
+    justify-content: space-between !important;
+    height: 45px;
+  }
+
+  .custom-header > div:first-child {
+    position: static;
+    transform: none;
+    margin-left: 30px; /* Space for the toggle button */
+  }
+
+  .custom-header > div:last-child {
+    position: static;
+  }
+
+  .header-logo {
+    margin-right: 0;
+    height: 22px;
+  }
+
+  .bi-chevron-down {
+    margin-right: 0;
+  }
+
+  .header-icon {
+    font-size: 1.15rem;
+  }
+
+  /* Mobile Sidebar Styles */
+  .sidebar {
+    transform: translateX(-100%);
+    width: 110px;
+    padding-top: 45px; /* Account for smaller mobile header */
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar.show {
+    transform: translateX(0);
+  }
+
+  /* Hide sidebar logo on mobile */
+  .sidebar-header {
+    display: none;
+  }
+
+  /* Move navigation items up to logo position */
+  .sidebar-nav {
+    padding-top: 20px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    margin-top: 45px;
+  }
+
+  .sidebar-toggle {
+    top: 2.5px;
+    left: 10px;
+    font-size: 1.7rem;
+  }
+
+  .header-icon:hover,
+  .sidebar-toggle:hover {
+    color: black !important;
   }
 }
