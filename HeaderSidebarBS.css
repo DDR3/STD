@@ -1,0 +1,184 @@
+.main-bg {
+  background-color: #ffebe3;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Custom header styles */
+.custom-header {
+  border-bottom: 2px solid #bfae9e;
+  background-color: #ecd2b3 !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+}
+
+.header-logo {
+  height: 30px;
+  margin-right: 12px;
+}
+
+.header-icon {
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.bi-chevron-down {
+  margin-right: 10px;
+}
+
+.student-name {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #000000;
+}
+
+.header-icon:hover {
+  color: #ff8800 !important;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 110px;
+  background-color: #e88d42;
+  z-index: 1020;
+  padding-top: 60px; /* Account for fixed header */
+  transition: transform 0.3s ease;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-header {
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #ffffff1a;
+}
+
+.sidebar-logo {
+  height: 70px;
+  width: auto;
+}
+
+.sidebar-nav {
+  padding: 0 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 10px;
+  color: #000000;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  border-radius: 8px;
+  margin: 5px 0;
+}
+
+.nav-item:hover {
+  background-color: #ffffff33;
+  color: #000000;
+  text-decoration: none;
+}
+
+.nav-item.active {
+  background-color: #ffffff33;
+  color: #000000;
+  text-decoration: none;
+}
+
+.nav-item i {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.nav-item span {
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+/* Sidebar Toggle Button */
+.sidebar-toggle {
+  position: fixed;
+  z-index: 1040;
+  border: none;
+  color: #000000;
+}
+
+.bi-list {
+  font-size: 1.45rem;
+}
+
+/* Main Content Adjustment */
+.main-content {
+  margin-left: 250px;
+  margin-top: 60px;
+  transition: margin-left 0.3s ease;
+}
+
+/* Mobile responsive styles for screens < 576px */
+@media (max-width: 575.98px) {
+  .custom-header {
+    justify-content: center !important;
+    height: 45px;
+  }
+
+  .custom-header > div:first-child {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .custom-header > div:last-child {
+    position: absolute;
+    right: 15px;
+  }
+
+  .header-logo {
+    margin-right: 0;
+    height: 22px;
+  }
+
+  .bi-chevron-down {
+    margin-right: 0;
+  }
+
+  .header-icon {
+    font-size: 1.15rem;
+  }
+
+  /* Mobile Sidebar Styles */
+  .sidebar {
+    transform: translateX(-100%);
+    width: 110px;
+    padding-top: 45px; /* Account for smaller mobile header */
+  }
+
+  .sidebar.show {
+    transform: translateX(0);
+  }
+
+  /* Hide sidebar logo on mobile */
+  .sidebar-header {
+    display: none;
+  }
+
+  /* Move navigation items up to logo position */
+  .sidebar-nav {
+    padding-top: 20px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    margin-top: 45px;
+  }
+
+  .sidebar-toggle {
+    top: 1.5px;
+  }
+}
