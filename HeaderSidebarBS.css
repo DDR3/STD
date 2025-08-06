@@ -259,3 +259,72 @@
     color: black !important;
   }
 }
+
+/* Tablet/Mobile responsive styles for screens 576px to 766px */
+@media (min-width: 576px) and (max-width: 766.98px) {
+  .custom-header {
+    justify-content: space-between !important;
+    height: 50px;
+  }
+
+  .custom-header > div:first-child {
+    position: static;
+    transform: none;
+    margin-left: 40px; /* Space for the toggle button */
+  }
+
+  .custom-header > div:last-child {
+    position: static;
+  }
+
+  .header-logo {
+    margin-right: 0;
+    height: 25px;
+  }
+
+  .bi-chevron-down {
+    margin-right: 0;
+  }
+
+  .header-icon {
+    font-size: 1.2rem;
+  }
+
+  /* Tablet Sidebar Styles */
+  .sidebar {
+    transform: translateX(-100%);
+    width: 120px;
+    padding-top: 50px; /* Account for tablet header */
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar.show {
+    transform: translateX(0);
+  }
+
+  /* Hide sidebar logo on tablet */
+  .sidebar-header {
+    display: none;
+  }
+
+  /* Move navigation items up to logo position */
+  .sidebar-nav {
+    padding-top: 20px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    margin-top: 50px;
+  }
+
+  .sidebar-toggle {
+    top: 5px;
+    left: 15px;
+    font-size: 1.8rem;
+  }
+
+  .header-icon:hover,
+  .sidebar-toggle:hover {
+    color: black !important;
+  }
+}
