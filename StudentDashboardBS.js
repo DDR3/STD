@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const sidebar = document.getElementById("sidebar");
 
   // Toggle sidebar on mobile
-  sidebarToggle.addEventListener("click", function () {
+  sidebarToggle.addEventListener("click", function (event) {
+    event.stopPropagation(); // Prevent event bubbling
     sidebar.classList.toggle("show");
   });
 
