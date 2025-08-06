@@ -2,6 +2,7 @@
   background-color: #ffebe3;
   min-height: 100vh;
   position: relative;
+  padding: 60px 0;
 }
 
 /* Custom header styles */
@@ -60,7 +61,7 @@
 }
 
 .sidebar-logo {
-  height: 70px;
+  height: 60px;
   width: auto;
 }
 
@@ -117,6 +118,10 @@
 
 /* Mobile responsive styles for screens < 576px */
 @media (max-width: 575.98px) {
+  .main-bg {
+    padding: 50px 1px;
+  }
+
   .custom-header {
     justify-content: space-between !important;
     height: 45px;

@@ -1,1 +1,243 @@
+/* Main Content Layout Styles */
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
 
+/* Content Box Styles */
+.content-box {
+  background-color: white;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height: 200px;
+}
+
+.top-box {
+  min-height: 350px;
+  margin-bottom: 20px;
+}
+
+.bottom-box-left {
+  min-height: 250px;
+}
+
+.bottom-box-right {
+  min-height: 250px;
+}
+
+/* Box Header Styles */
+.box-header {
+  border-bottom: 1px solid #000000;
+  padding: 10px 15px;
+}
+
+.box-title {
+  color: #e88d42;
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin: 0;
+  text-align: left;
+}
+
+.cycle-info {
+  color: #e88d42;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: right;
+}
+
+.box-content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-style: italic;
+  min-height: 150px;
+}
+
+/* Session Cards Styles */
+.session-cards-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.session-card {
+  background-color: white;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.session-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.session-card.unlock {
+  opacity: 100%;
+}
+
+.session-card.lock {
+  opacity: 100%;
+}
+
+.session-image {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 100%;
+  background-color: white;
+  flex-shrink: 0;
+}
+
+.session-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.session-content {
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.session-title {
+  color: #333;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+  line-height: 1.2;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 2.4rem;
+}
+
+.session-subtitle {
+  color: #666;
+  font-size: 0.8rem;
+  margin-bottom: 0.75rem;
+  flex-grow: 1;
+}
+
+.session-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  flex-shrink: 0;
+}
+
+.session-lock {
+  font-size: 1rem;
+  color: #666;
+}
+
+.progress-badge {
+  background-color: #f0f0f0;
+  color: #999;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.progress-badge.completed {
+  background-color: #e88d42;
+  color: white;
+}
+
+/* Background color classes for session status areas */
+.bg-primary-light,
+.session-card.bgc1 {
+  background-color: #cbe2fd;
+}
+
+.bg-success-light,
+.session-card.bgc2 {
+  background-color: #c3fae7;
+}
+
+.bg-warning-light,
+.session-card.bgc3 {
+  background-color: #ffceef;
+}
+
+.bg-secondary-light,
+.session-card.bgc4 {
+  background-color: #e9d3fb;
+}
+
+.bg-info-light,
+.session-card.bgc5 {
+  background-color: #f4fde7;
+}
+
+/* Box content adjustments for session cards */
+.top-box .box-content {
+  min-height: auto;
+  display: block;
+  padding: 15px;
+}
+
+/* Center the session cards row */
+.session-cards-container .row {
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Add spacing between cards */
+.session-cards-container .col-lg-2,
+.session-cards-container .col-md-4,
+.session-cards-container .col-sm-6 {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 575.98px) {
+  .bottom-box-left {
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+
+  .bottom-box-right {
+    margin-left: 0;
+  }
+
+  .content-wrapper {
+    padding: 0 10px;
+  }
+
+  .box-title {
+    font-size: 1.1rem;
+  }
+
+  .cycle-info {
+    display: none;
+  }
+
+  .session-cards-container .row {
+    gap: 0;
+  }
+
+  .session-cards-container .col-lg-2,
+  .session-cards-container .col-md-4,
+  .session-cards-container .col-sm-6 {
+    margin-bottom: 0;
+  }
+}
