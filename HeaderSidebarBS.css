@@ -115,13 +115,6 @@
   color: #ff8800;
 }
 
-/* Main Content Adjustment */
-.main-content {
-  margin-left: 250px;
-  margin-top: 60px;
-  transition: margin-left 0.3s ease;
-}
-
 /* Mobile responsive styles for screens < 576px */
 @media (max-width: 575.98px) {
   .custom-header {
@@ -174,11 +167,6 @@
     padding-top: 20px;
   }
 
-  .main-content {
-    margin-left: 0;
-    margin-top: 45px;
-  }
-
   .sidebar-toggle {
     top: 2.5px;
     left: 10px;
@@ -191,140 +179,25 @@
   }
 }
 
-/* Mobile landscape responsive styles for screens < 576px */
-@media (max-width: 575.98px) and (orientation: landscape) {
-  .custom-header {
-    justify-content: space-between !important;
-    height: 45px;
-  }
-
-  .custom-header > div:first-child {
-    position: static;
-    transform: none;
-    margin-left: 30px; /* Space for the toggle button */
-  }
-
-  .custom-header > div:last-child {
-    position: static;
-  }
-
+/* Medium screen responsive styles for screens 768px to 979px */
+@media (min-width: 768px) and (max-width: 979px) {
   .header-logo {
-    margin-right: 0;
-    height: 22px;
+    height: 28px;
+    margin-right: 12px;
   }
 
-  .bi-chevron-down {
-    margin-right: 0;
-  }
-
-  .header-icon {
-    font-size: 1.15rem;
-  }
-
-  /* Mobile Sidebar Styles */
-  .sidebar {
-    transform: translateX(-100%);
-    width: 110px;
-    padding-top: 45px; /* Account for smaller mobile header */
-    transition: transform 0.3s ease;
-  }
-
-  .sidebar.show {
-    transform: translateX(0);
-  }
-
-  /* Hide sidebar logo on mobile */
+  /* Hide sidebar logo */
   .sidebar-header {
     display: none;
   }
 
-  /* Move navigation items up to logo position */
+  /* Hide toggle button */
+  .sidebar-toggle {
+    display: none !important;
+  }
+
+  /* Adjust sidebar padding since logo is hidden */
   .sidebar-nav {
     padding-top: 20px;
-  }
-
-  .main-content {
-    margin-left: 0;
-    margin-top: 45px;
-  }
-
-  .sidebar-toggle {
-    top: 2.5px;
-    left: 10px;
-    font-size: 1.7rem;
-  }
-
-  .header-icon:hover,
-  .sidebar-toggle:hover {
-    color: black !important;
-  }
-}
-
-/* Tablet/Mobile responsive styles for screens 576px to 766px */
-@media (min-width: 576px) and (max-width: 766.98px) {
-  .custom-header {
-    justify-content: space-between !important;
-    height: 50px;
-  }
-
-  .custom-header > div:first-child {
-    position: static;
-    transform: none;
-    margin-left: 40px; /* Space for the toggle button */
-  }
-
-  .custom-header > div:last-child {
-    position: static;
-  }
-
-  .header-logo {
-    margin-right: 0;
-    height: 25px;
-  }
-
-  .bi-chevron-down {
-    margin-right: 0;
-  }
-
-  .header-icon {
-    font-size: 1.2rem;
-  }
-
-  /* Tablet Sidebar Styles */
-  .sidebar {
-    transform: translateX(-100%);
-    width: 120px;
-    padding-top: 50px; /* Account for tablet header */
-    transition: transform 0.3s ease;
-  }
-
-  .sidebar.show {
-    transform: translateX(0);
-  }
-
-  /* Hide sidebar logo on tablet */
-  .sidebar-header {
-    display: none;
-  }
-
-  /* Move navigation items up to logo position */
-  .sidebar-nav {
-    padding-top: 20px;
-  }
-
-  .main-content {
-    margin-left: 0;
-    margin-top: 50px;
-  }
-
-  .sidebar-toggle {
-    top: 5px;
-    left: 15px;
-    font-size: 1.8rem;
-  }
-
-  .header-icon:hover,
-  .sidebar-toggle:hover {
-    color: black !important;
   }
 }
