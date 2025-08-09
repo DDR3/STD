@@ -335,7 +335,7 @@
 }
 
 /* Mobile responsive styles for screens < 576px */
-@media (max-width: 575.98px) {
+@media (max-width: 579.98px) {
   .main-content {
     margin-left: 0;
     padding: 30px 7px;
@@ -359,7 +359,7 @@
   .small-box2 {
     height: auto;
     min-height: auto;
-    margin-bottom: 64px;
+    margin-bottom: 80px;
   }
 
   .box-header {
