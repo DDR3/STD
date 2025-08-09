@@ -338,7 +338,7 @@
 @media (max-width: 579.98px) {
   .main-content {
     margin-left: 0;
-    padding: 30px 7px;
+    padding: 40px 7px 50px 7px;
     height: calc(100vh - 45px);
   }
 
@@ -359,7 +359,6 @@
   .small-box2 {
     height: auto;
     min-height: auto;
-    margin-bottom: 80px;
   }
 
   .box-header {
