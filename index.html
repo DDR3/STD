@@ -82,7 +82,7 @@
         />
       </div>
       <div class="sidebar-nav">
-        <a href="StudentDashboardBS.html" class="nav-item" data-page="home">
+        <a href="index.html" class="nav-item" data-page="home">
           <i class="bi bi-house"></i>
           <span>Home</span>
         </a>
@@ -102,123 +102,105 @@
     </nav>
 
     <!-- Main Content -->
-    <main class="container-fluid py-4 main-content">
-      <div class="content-wrapper">
-        <!-- Top Content Box -->
-        <div class="content-box top-box mb-4">
-          <div
-            class="box-header d-flex justify-content-between align-items-start mb-3"
-          >
-            <h2 class="box-title">Outer Space</h2>
-            <span class="cycle-info">Cycles 4 - Year 1</span>
-          </div>
-          <div class="box-content">
-            <div class="session-cards-container">
-              <div class="row g-3">
-                <!-- Session 1 -->
-                <div class="col-lg-2 col-md-4 col-sm-6">
-                  <div class="session-card bgc1 unlock completed">
+    <main class="main-content">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- Left Box - Large -->
+          <div class="col-lg-9 col-md-13 mb-4">
+            <div class="content-box large-box">
+              <div class="box-header">
+                <h3 class="header-title-left">Outer Space</h3>
+                <h3 class="header-title-right">Cycles 4 - Year 1</h3>
+              </div>
+              <div class="box-content">
+                <div class="sessions-grid">
+                  <!-- Session 1 -->
+                  <div class="session-card card1 unlock">
                     <div class="session-image">
                       <img
                         src="stud-img/session1.png"
                         alt="Get Ready for Lift Off!"
-                        class="img-fluid"
                       />
                     </div>
-                    <div class="session-content">
-                      <h6 class="session-title">Get Ready for Lift Off!</h6>
+                    <div class="session-info">
+                      <h4 class="session-title">Get Ready for Lift Off!</h4>
                       <p class="session-subtitle">Session 1 - Y1</p>
-                      <div class="session-status bg-primary-light">
+                      <div class="session-progress">
                         <span class="progress-badge completed"
                           >100% Progress</span
                         >
-                        <i class="bi bi-unlock session-lock"></i>
+                        <i class="bi bi-unlock session-icon"></i>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <!-- Session 2 -->
-                <div class="col-lg-2 col-md-4 col-sm-6">
-                  <div class="session-card bgc2 unlock completed">
+                  <!-- Session 2 -->
+                  <div class="session-card card2 unlock">
                     <div class="session-image">
-                      <img
-                        src="stud-img/session2.png"
-                        alt="Space out!"
-                        class="img-fluid"
-                      />
+                      <img src="stud-img/session2.png" alt="Space out!" />
                     </div>
-                    <div class="session-content">
-                      <h6 class="session-title">Space out!</h6>
+                    <div class="session-info">
+                      <h4 class="session-title">Space out!</h4>
                       <p class="session-subtitle">Session 2 - Y1</p>
-                      <div class="session-status bg-success-light">
+                      <div class="session-progress">
                         <span class="progress-badge completed"
                           >100% Progress</span
                         >
-                        <i class="bi bi-unlock session-lock"></i>
+                        <i class="bi bi-unlock session-icon"></i>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <!-- Session 3 -->
-                <div class="col-lg-2 col-md-4 col-sm-6">
-                  <div class="session-card bgc3 unlock">
+                  <!-- Session 3 -->
+                  <div class="session-card card3 unlock">
                     <div class="session-image">
-                      <img
-                        src="stud-img/session3.png"
-                        alt="You're the Star"
-                        class="img-fluid"
-                      />
+                      <img src="stud-img/session3.png" alt="You're the Star" />
                     </div>
-                    <div class="session-content">
-                      <h6 class="session-title">You're the Star</h6>
+                    <div class="session-info">
+                      <h4 class="session-title">You're the Star</h4>
                       <p class="session-subtitle">Session 3 - Y1</p>
-                      <div class="session-status bg-warning-light">
-                        <span class="progress-badge">0% Progress</span>
-                        <i class="bi bi-unlock session-lock"></i>
+                      <div class="session-progress">
+                        <span class="progress-badge incomplete"
+                          >0% Progress</span
+                        >
+                        <i class="bi bi-unlock session-icon"></i>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <!-- Session 4 -->
-                <div class="col-lg-2 col-md-4 col-sm-6">
-                  <div class="session-card bgc4 lock">
+                  <!-- Session 4 -->
+                  <div class="session-card card4 lock">
                     <div class="session-image">
-                      <img
-                        src="stud-img/session4.png"
-                        alt="Alien Invasion!"
-                        class="img-fluid"
-                      />
+                      <img src="stud-img/session4.png" alt="Alien Invasion!" />
                     </div>
-                    <div class="session-content">
-                      <h6 class="session-title">Alien Invasion!</h6>
+                    <div class="session-info">
+                      <h4 class="session-title">Alien Invasion!</h4>
                       <p class="session-subtitle">Session 4 - Y1</p>
-                      <div class="session-status bg-secondary-light">
-                        <span class="progress-badge">0% Progress</span>
-                        <i class="bi bi-lock session-lock"></i>
+                      <div class="session-progress">
+                        <span class="progress-badge incomplete"
+                          >0% Progress</span
+                        >
+                        <i class="bi bi-lock session-icon"></i>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <!-- Session 5 -->
-                <div class="col-lg-2 col-md-4 col-sm-6">
-                  <div class="session-card bgc5 lock">
+                  <!-- Session 5 -->
+                  <div class="session-card card5 lock">
                     <div class="session-image">
                       <img
                         src="stud-img/session5.png"
                         alt="We're going to the moon"
-                        class="img-fluid"
                       />
                     </div>
-                    <div class="session-content">
-                      <h6 class="session-title">We're going to the moon</h6>
+                    <div class="session-info">
+                      <h4 class="session-title">We're going to the moon</h4>
                       <p class="session-subtitle">Session 5 - Y1</p>
-                      <div class="session-status bg-info-light">
-                        <span class="progress-badge">0% Progress</span>
-                        <i class="bi bi-lock session-lock"></i>
+                      <div class="session-progress">
+                        <span class="progress-badge incomplete"
+                          >0% Progress</span
+                        >
+                        <i class="bi bi-lock session-icon"></i>
                       </div>
                     </div>
                   </div>
@@ -226,27 +208,133 @@
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Bottom Content Boxes Row -->
-        <div class="row">
-          <div class="col-md-8">
-            <div class="content-box bottom-box-left">
-              <div class="box-header mb-3">
-                <h3 class="box-title">Announcements</h3>
-              </div>
-              <div class="box-content">
-                <!-- Content for left bottom box will go here -->
+          <!-- Right Column - Two smaller boxes -->
+          <div class="col-lg-3 col-md-12">
+            <!-- Top Right Box -->
+            <div class="mb-4">
+              <div class="content-box small-box1">
+                <div class="box-header">
+                  <h3 class="header-title-side">Announcements</h3>
+                </div>
+                <div class="box-content">
+                  <div class="announcements-list">
+                    <!-- Announcement 1 -->
+                    <div class="announcement-wrapper">
+                      <div class="date-circle"></div>
+                      <div class="announcement-item">
+                        <div class="announcement-date">
+                          <div class="date-info">
+                            <span class="date-day">April 23</span>
+                            <span class="date-year">2025</span>
+                          </div>
+                        </div>
+                        <div class="vertical-divider"></div>
+                        <div class="announcement-content">
+                          <span class="announcement-title"
+                            >Cycle 5 - Next Month</span
+                          >
+                        </div>
+                        <div class="announcement-arrow">
+                          <i class="bi bi-chevron-right"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Announcement 2 -->
+                    <div class="announcement-wrapper">
+                      <div class="date-circle"></div>
+                      <div class="announcement-item">
+                        <div class="announcement-date">
+                          <div class="date-info">
+                            <span class="date-day">April 11</span>
+                            <span class="date-year">2025</span>
+                          </div>
+                        </div>
+                        <div class="vertical-divider"></div>
+                        <div class="announcement-content">
+                          <span class="announcement-title"
+                            >No Classes on Friday...</span
+                          >
+                        </div>
+                        <div class="announcement-arrow">
+                          <i class="bi bi-chevron-right"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Announcement 3 -->
+                    <div class="announcement-wrapper">
+                      <div class="date-circle"></div>
+                      <div class="announcement-item">
+                        <div class="announcement-date">
+                          <div class="date-info">
+                            <span class="date-day">June 1</span>
+                            <span class="date-year">2025</span>
+                          </div>
+                        </div>
+                        <div class="vertical-divider"></div>
+                        <div class="announcement-content">
+                          <span class="announcement-title">Lorem ipsum</span>
+                        </div>
+                        <div class="announcement-arrow">
+                          <i class="bi bi-chevron-right"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Announcement 4 -->
+                    <div class="announcement-wrapper">
+                      <div class="date-circle"></div>
+                      <div class="announcement-item">
+                        <div class="announcement-date">
+                          <div class="date-info">
+                            <span class="date-day">June 1</span>
+                            <span class="date-year">2025</span>
+                          </div>
+                        </div>
+                        <div class="vertical-divider"></div>
+                        <div class="announcement-content">
+                          <span class="announcement-title">Lorem ipsum</span>
+                        </div>
+                        <div class="announcement-arrow">
+                          <i class="bi bi-chevron-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="content-box bottom-box-right">
-              <div class="box-header mb-3">
-                <h3 class="box-title">Help Center</h3>
-              </div>
-              <div class="box-content">
-                <!-- Content for right bottom box will go here -->
+
+            <!-- Bottom Right Box -->
+            <div class="mb-4">
+              <div class="content-box small-box2">
+                <div class="box-header">
+                  <h3 class="header-title-side">Help Center</h3>
+                </div>
+                <div class="box-content">
+                  <div class="help-list">
+                    <a class="help-item" href="#">
+                      <i
+                        class="bi bi-journal-bookmark help-icon"
+                        aria-hidden="true"
+                      ></i>
+                      <span class="help-label">Quick Start Guides</span>
+                    </a>
+                    <a class="help-item" href="#">
+                      <i class="bi bi-compass help-icon" aria-hidden="true"></i>
+                      <span class="help-label">Navigation</span>
+                    </a>
+                    <a class="help-item" href="#">
+                      <i
+                        class="bi bi-question-circle help-icon"
+                        aria-hidden="true"
+                      ></i>
+                      <span class="help-label">FAQ</span>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

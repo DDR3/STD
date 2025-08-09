@@ -51,7 +51,7 @@ function setActiveNavItem() {
     const href = item.getAttribute("href");
     if (
       href === currentPage ||
-      (currentPage === "index.html" && href === "StudentDashboardBS.html")
+      (currentPage === "index.html" && href === "index.html")
     ) {
       item.classList.add("active");
     } else {

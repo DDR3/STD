@@ -1,8 +1,9 @@
 .main-bg {
   background-color: #ffebe3;
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
-  padding: 60px 0;
+  padding-top: 60px;
+  overflow: hidden;
 }
 
 /* Custom header styles */
@@ -119,7 +120,7 @@
 /* Mobile responsive styles for screens < 576px */
 @media (max-width: 575.98px) {
   .main-bg {
-    padding: 50px 1px;
+    padding-top: 45px;
   }
 
   .custom-header {
