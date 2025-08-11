@@ -1,9 +1,10 @@
 .main-bg {
   background-color: #ffebe3;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   padding-top: 60px;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /* Custom header styles */
@@ -148,7 +149,7 @@
   }
 
   .header-icon {
-    font-size: 1.15rem;
+    font-size: 1rem;
   }
 
   /* Mobile Sidebar Styles */

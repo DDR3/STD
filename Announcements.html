@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Announcements</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="HeaderSidebarBS.css" />
+    <link rel="stylesheet" href="Announcements.css" />
+    <!--JS--->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="HeaderSidebarBS.js"></script>
+    <script defer src="Announcements.js"></script>
+  </head>
+  <body class="main-bg">
+    <!-- Header -->
+    <header
+      class="navbar navbar-expand-lg custom-header px-3 py-2 d-flex align-items-center justify-content-between"
+    >
+      <div class="d-flex align-items-center">
+        <img
+          src="stud-img/header-logo-nobg.png"
+          alt="SparkLab Logo"
+          class="header-logo d-none d-md-block"
+        />
+        <img
+          src="stud-img/logopart1-nobg.png"
+          alt="SparkLab Logo"
+          class="header-logo d-block d-md-none"
+        />
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <i class="bi bi-search header-icon"></i>
+        <i class="bi bi-bell header-icon"></i>
+        <span class="student-name d-none d-sm-inline">Student Name</span>
+        <div class="dropdown">
+          <i
+            class="bi bi-chevron-down header-icon"
+            id="dropdownMenuButton"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          ></i>
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="dropdownMenuButton"
+          >
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="#">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sidebar Toggle Icon for Mobile and Tablet -->
+    <i class="bi bi-list sidebar-toggle d-lg-none" id="sidebarToggle"></i>
+
+    <!-- Sidebar Overlay for Mobile -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <img
+          src="stud-img/left-nav-logo.png"
+          alt="SparkLab Logo"
+          class="sidebar-logo"
+        />
+      </div>
+      <div class="sidebar-nav">
+        <a href="index.html" class="nav-item" data-page="home">
+          <i class="bi bi-house"></i>
+          <span>Home</span>
+        </a>
+        <a href="Cycles.html" class="nav-item" data-page="cycles">
+          <i class="bi bi-book"></i>
+          <span>Cycles</span>
+        </a>
+        <a href="Announcements.html" class="nav-item" data-page="announcements">
+          <i class="bi bi-megaphone"></i>
+          <span>Announcements</span>
+        </a>
+        <a href="#" class="nav-item" data-page="help">
+          <i class="bi bi-question-circle"></i>
+          <span>Help</span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <section class="announcement-content">
+              <div class="box-header">
+                <h3 class="announcement-title mb-0">Announcements</h3>
+                <div class="header-actions d-flex align-items-center gap-2">
+                  <!-- Left dropdown: Sort by Latest/Oldest -->
+                  <div class="dropdown">
+                    <button
+                      class="btn dropdown-toggle dropdown-control"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Sort by Latest
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li>
+                        <a
+                          class="dropdown-item active"
+                          href="#"
+                          data-sort="latest"
+                          >Sort by Latest</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#" data-sort="oldest"
+                          >Sort by Oldest</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Right dropdown: Sort by All/Notice/Schedule/Registration -->
+                  <div class="dropdown">
+                    <button
+                      class="btn dropdown-toggle dropdown-control"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Sort by All
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li>
+                        <a
+                          class="dropdown-item active"
+                          href="#"
+                          data-filter="all"
+                          >Sort by All</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#" data-filter="notice"
+                          >Sort by Notice</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#" data-filter="schedule"
+                          >Sort by Schedule</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="#"
+                          data-filter="registration"
+                          >Sort by Registration</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Announcement List -->
+              <div class="announcement-list">
+                <div class="announcement-item">
+                  <div class="bullet-point"></div>
+                  <div class="announcement-card">
+                    <div class="date-section">
+                      <div class="month-day">April 23</div>
+                      <div class="year">2025</div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="content-section">
+                      <h4 class="announcement-title-text">
+                        Cycle 5 - Next Month
+                      </h4>
+                      <p class="announcement-description">
+                        Registration for new and repeating student, will be
+                        start on May 5
+                      </p>
+                    </div>
+                    <div class="nav-icon">
+                      <i class="bi bi-chevron-right"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="announcement-item">
+                  <div class="bullet-point"></div>
+                  <div class="announcement-card">
+                    <div class="date-section">
+                      <div class="month-day">April 11</div>
+                      <div class="year">2025</div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="content-section">
+                      <h4 class="announcement-title-text">
+                        No Classes on Friday April 18
+                      </h4>
+                      <p class="announcement-description">Due to holy week.</p>
+                    </div>
+                    <div class="nav-icon">
+                      <i class="bi bi-chevron-right"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="announcement-item">
+                  <div class="bullet-point"></div>
+                  <div class="announcement-card">
+                    <div class="date-section">
+                      <div class="month-day">June 1</div>
+                      <div class="year">2025</div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="content-section">
+                      <h4 class="announcement-title-text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Ipsam, obcaecati architecto. Fuga nostrum,
+                        perspiciatis blanditiis ad rem veritatis tenetur
+                        dignissimos consequatur consectetur quisquam sequi,
+                        vitae, error libero ullam enim soluta.
+                      </h4>
+                      <p class="announcement-description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit.
+                      </p>
+                    </div>
+                    <div class="nav-icon">
+                      <i class="bi bi-chevron-right"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="announcement-item">
+                  <div class="bullet-point"></div>
+                  <div class="announcement-card">
+                    <div class="date-section">
+                      <div class="month-day">June 1</div>
+                      <div class="year">2025</div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="content-section">
+                      <h4 class="announcement-title-text">Lorem ipsum</h4>
+                      <p class="announcement-description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit.
+                      </p>
+                    </div>
+                    <div class="nav-icon">
+                      <i class="bi bi-chevron-right"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="announcement-item">
+                  <div class="bullet-point"></div>
+                  <div class="announcement-card">
+                    <div class="date-section">
+                      <div class="month-day">June 1</div>
+                      <div class="year">2025</div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="content-section">
+                      <h4 class="announcement-title-text">Lorem ipsum</h4>
+                      <p class="announcement-description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit.
+                      </p>
+                    </div>
+                    <div class="nav-icon">
+                      <i class="bi bi-chevron-right"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- Pagination Navigation -->
+            <div class="pagination-container">
+              <div class="pagination-box">
+                <button class="nav-btn nav-btn-prev" aria-label="Previous">
+                  <i class="bi bi-chevron-left"></i>
+                </button>
+                <span class="page-indicator">1 of 2</span>
+                <button class="nav-btn nav-btn-next" aria-label="Next">
+                  <i class="bi bi-chevron-right next-icon"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

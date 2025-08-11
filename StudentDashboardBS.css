@@ -14,6 +14,11 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.box-content {
+  padding: 20px;
+  min-height: calc(100% - 60px); /* Subtract header height */
+}
+
 .content-box:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -58,11 +63,6 @@
   font-size: 1.2rem;
   font-weight: 600;
   color: #e88d42;
-}
-
-.box-content {
-  padding: 20px;
-  min-height: calc(100% - 60px); /* Subtract header height */
 }
 
 /* Allow Help Center box to size to its content */
