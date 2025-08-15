@@ -162,9 +162,99 @@
 }
 
 /* Mobile responsive styles for screens < 576px */
-@media (max-width: 579.98px) {
+@media (max-width: 575.98px) {
   .main-content {
     margin-left: 0;
-    padding: 10px;
+    padding: 15px 10px 120px;
+  }
+
+  /* Adjust session-card-header layout for mobile */
+  .session-card-header {
+    padding: 12px 20px;
+    min-height: auto;
+  }
+
+  /* Hide thumbnail on mobile for session-card-header */
+  .session-thumb-header {
+    display: none;
+  }
+
+  /* Change button text to "Expand" on mobile */
+  .chevron-btn span {
+    display: none;
+  }
+
+  .chevron-btn::before {
+    content: "Expand";
+    display: inline;
+  }
+
+  .session-subtitle {
+    font-size: 0.9rem;
+  }
+
+  /* Reorganize session-card layout for mobile to match design image
+     - thumbnail spans full width on top
+     - content row below: left-aligned title, right side: badge + chevron
+     - keep existing card background colors (card1..card5) unchanged
+  */
+  .session-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    border-radius: 12px;
+    overflow: hidden; /* ensure thumbnail rounds correctly and content clips */
+    padding: 0;
+  }
+
+  .session-thumb {
+    width: 100%;
+    max-width: none;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    display: block;
+  }
+
+  /* Row layout for title + right controls under the thumbnail */
+
+  /* Stack title above the right controls as requested: Title (row1) then session-right-content (row2) */
+  .session-content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 15px 16px 12px;
+  }
+
+  .session-text {
+    text-align: left;
+    flex: 0 0 auto;
+    align-self: flex-start;
+  }
+
+  .session-title {
+    font-size: 1.2rem;
+    margin: 0;
+    text-align: left;
+    align-self: flex-start;
+  }
+
+  /* session-right-content should be its own row beneath the title
+     with badge on the left and icon on the right */
+  .session-right-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    padding-top: 20px;
+  }
+
+  .progress-badge {
+    font-size: 0.8rem;
+    padding: 8px 14px;
+    border-radius: 20px;
   }
 }
