@@ -1,0 +1,170 @@
+/* Main content */
+.main-content {
+  margin-left: 110px;
+  padding: 20px 220px;
+}
+
+.cycle-container {
+  gap: 20px;
+}
+
+/* Header content layout */
+.session-card-header {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+  min-height: 80px;
+}
+
+.session-thumb-header {
+  width: 170px;
+  max-width: 25%;
+  height: 85px;
+  object-fit: fill;
+  border-radius: 10px;
+}
+
+.session-title-header {
+  font-size: 1.45rem;
+  color: #bb5a3f;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.session-subtitle {
+  font-size: 1rem;
+  color: #bb5a3f;
+}
+
+.session-card-header {
+  padding-left: 0;
+  padding-right: 15px;
+}
+
+.chevron-btn {
+  gap: 6px;
+  padding-right: 6px;
+}
+
+.chevron-icon {
+  margin-right: 4px;
+  font-size: 1rem;
+}
+
+.session-text-header {
+  line-height: 1.5;
+}
+
+/* Session card content */
+.session-card {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+  min-height: 100px;
+}
+
+.session-thumb {
+  width: 220px;
+  max-width: 25%;
+  height: 100px;
+  object-fit: fill;
+  border-radius: 10px;
+}
+
+.session-title {
+  font-size: 1.55rem;
+  color: #000000c8;
+  font-weight: 600;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+.session-right-content {
+  margin-right: 10px;
+  gap: 6px;
+}
+
+.progress-badge {
+  display: inline-flex; /* allow centering of text + icon */
+  align-items: center; /* vertical center */
+  justify-content: center; /* horizontal center inside the badge */
+  gap: 3px; /* small space between text and icon */
+  font-size: 0.8rem;
+  padding: 8px;
+  border-radius: 12px;
+  font-weight: 500;
+  line-height: 1; /* prevent extra vertical offset */
+}
+
+.check-icon {
+  display: inline-block;
+  font-size: 1.1rem;
+  color: white;
+  line-height: 1;
+}
+
+.progress-badge.completed {
+  background-color: #e88d42;
+  color: white;
+}
+
+.progress-badge.incomplete {
+  background-color: #f0f0f0;
+  color: #000000c8;
+}
+
+.session-icon.unlock {
+  font-size: 1.45rem;
+  color: #666666;
+}
+
+.session-icon.lock {
+  font-size: 1.5rem;
+  color: #666666;
+  margin-right: 6px;
+}
+
+.session-card.unlock {
+  opacity: 100%;
+}
+
+.session-card.lock {
+  opacity: 40%;
+}
+
+.session-card.card1 {
+  background-color: #cbe2fd;
+}
+
+.session-card.card2 {
+  background-color: #c3fae7;
+}
+
+.session-card.card3 {
+  background-color: #ffceef;
+}
+
+.session-card.card4 {
+  background-color: #e9d3fb;
+}
+
+.session-card.card5 {
+  background-color: #f4fde7;
+}
+
+/* Laptop screen adjustments */
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .main-content {
+    margin-left: 110px;
+    padding: 10px 130px 50px;
+  }
+}
+
+/* Mobile responsive styles for screens < 576px */
+@media (max-width: 579.98px) {
+  .main-content {
+    margin-left: 0;
+    padding: 10px;
+  }
+}

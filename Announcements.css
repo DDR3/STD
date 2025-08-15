@@ -468,7 +468,7 @@
 @media (min-width: 1200px) and (max-width: 1600px) {
   .main-content {
     margin-left: 117px;
-    padding: 20px 100px;
+    padding: 20px 100px 30px;
   }
 
   .announcement-content {

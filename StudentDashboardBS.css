@@ -176,10 +176,15 @@
 }
 
 .progress-badge {
+  display: inline-flex; /* allow centering of text + icon */
+  align-items: center; /* vertical center */
+  justify-content: center; /* horizontal center inside the badge */
+  gap: 3px; /* small space between text and icon */
   font-size: 0.8rem;
   padding: 4px 8px;
   border-radius: 12px;
   font-weight: 500;
+  line-height: 1; /* prevent extra vertical offset */
 }
 
 .progress-badge.completed {
@@ -190,6 +195,13 @@
 .progress-badge.incomplete {
   background-color: #f0f0f0;
   color: #666666;
+}
+
+.check-icon {
+  display: inline-block;
+  font-size: 1.1rem;
+  color: white;
+  line-height: 1;
 }
 
 .session-icon {
