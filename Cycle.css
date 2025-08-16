@@ -82,7 +82,7 @@
 
 .session-right-content {
   margin-right: 10px;
-  gap: 6px;
+  gap: 10px;
 }
 
 .progress-badge {
@@ -256,5 +256,13 @@
     font-size: 0.8rem;
     padding: 8px 14px;
     border-radius: 20px;
+  }
+}
+
+/* Medium screen responsive styles for screens 768px to 979px */
+@media (min-width: 768px) and (max-width: 979px) {
+  .main-content {
+    margin-left: 110px;
+    padding: 20px 50px;
   }
 }

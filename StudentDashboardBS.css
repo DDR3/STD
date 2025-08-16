@@ -151,7 +151,7 @@
   font-size: 1.15rem;
   font-weight: 600;
   color: #333333;
-  margin: 0 0 5px 0;
+  margin: 0 0 10px 0;
   line-height: 1.2;
   height: 2.4em; /* Fixed height for 2 lines */
   overflow: hidden;
@@ -419,26 +419,38 @@
   }
 
   .session-info {
-    padding: 12px;
+    padding: 10px 13px 0;
     height: calc(100% - 140px);
+    justify-content: flex-start; /* keep title/subtitle near the top so they don't get pushed apart */
   }
 
   .session-title {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     height: 2.2em;
+    margin: 0 0 10px 0;
   }
 
   .session-subtitle {
-    font-size: 0.8rem;
+    font-size: 1rem;
+    margin: 0 0 10px 0; /* reduce bottom margin to bring subtitle and badge closer */
+    display: block;
   }
 
   .progress-badge {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     padding: 3px 6px;
   }
 
+  /* Place badge next to subtitle and remove large vertical spacing on mobile */
+  .session-progress {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* small gap between badge and icon */
+    margin-top: 0; /* remove large vertical spacing between subtitle and badge */
+  }
+
   .session-icon {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
   /* Mobile announcements */
@@ -502,6 +514,16 @@
   .help-label {
     font-size: 0.98rem;
   }
+
+  /* Reduce vertical spacing between stacked boxes on small screens */
+  .col-lg-8.mb-4,
+  .col-lg-4 .mb-4 {
+    margin-bottom: 10px !important;
+  }
+
+  .d-block.d-lg-none.mb-4 {
+    margin-bottom: 23px !important;
+  }
 }
 
 /* Medium screen responsive styles for screens 768px to 979px */
@@ -561,24 +583,35 @@
   .session-info {
     padding: 13px;
     height: calc(100% - 150px);
+    justify-content: flex-start; /* keep title/subtitle near the top */
   }
 
   .session-title {
-    font-size: 0.95rem;
+    font-size: 1.15rem;
     height: 2.3em;
   }
 
   .session-subtitle {
-    font-size: 0.85rem;
+    font-size: 1.05rem;
+    margin: 0 0 6px 0; /* reduce bottom spacing so badge sits closer */
+    display: block;
   }
 
   .progress-badge {
-    font-size: 0.75rem;
+    font-size: 0.95rem;
     padding: 3px 7px;
   }
 
+  /* Place badge next to subtitle and remove large vertical spacing on medium screens */
+  .session-progress {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 0; /* remove auto push to bottom */
+  }
+
   .session-icon {
-    font-size: 1.05rem;
+    font-size: 1.35rem;
   }
 
   /* Medium screen announcements */
